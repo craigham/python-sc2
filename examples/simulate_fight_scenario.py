@@ -26,7 +26,7 @@ class FightBot(BotAI):
 
     async def on_step(self, iteration):
         # Wait till control retrieved, destroy all starting units, recreate the world
-        if iteration > 0 and self.enemy_units and not self.enemy_location:
+        if iteration > 2 and self.enemy_units and not self.enemy_location:
             await self.reset_arena()
 
         if (self.units or self.structures) and (self.enemy_units or self.enemy_structures):
