@@ -46,6 +46,7 @@ race_worker: Dict[Race, UnitTypeId] = {
 }
 
 race_townhalls: Dict[Race, Set[UnitTypeId]] = {
+    Race.NoRace: {},
     Race.Protoss: {UnitTypeId.NEXUS},
     Race.Terran: {
         UnitTypeId.COMMANDCENTER,

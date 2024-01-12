@@ -32,8 +32,8 @@ from sc2.proxy import Proxy
 from sc2.sc2process import SC2Process, kill_switch
 
 # Set the global logging level
-logger.remove()
-logger.add(sys.stdout, level="INFO")
+# logger.remove()
+# logger.add(sys.stdout, level="INFO")
 
 
 @dataclass
@@ -240,6 +240,8 @@ async def _play_replay(client, ai, realtime=False, player_id=0):
     game_info = await client.get_game_info()
     ping_response = await client.ping()
 
+    # hack for observing game
+    game_info.player_races[0] = 0
     client.game_step = 1
     # This game_data will become self._game_data in botAI
     ai._prepare_start(
