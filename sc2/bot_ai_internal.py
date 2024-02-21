@@ -194,8 +194,7 @@ class BotAIInternal(ABC):
                 # And that they are on the same terrain level
                 if any(
                     resource_a.distance_to(resource_b) <= resource_spread_threshold
-                    and height_grid[resource_a.position.rounded]
-                    == height_grid[resource_b.position.rounded]
+                    and abs(height_grid[resource_a.position.rounded] - height_grid[resource_b.position.rounded]) <= 10
                     for resource_a, resource_b in itertools.product(group_a, group_b)
                 ):
                     # Remove the single groups and add the merged group
