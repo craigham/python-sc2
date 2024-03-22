@@ -1202,7 +1202,7 @@ class BotAI(BotAIInternal):
         """Returns True if a ground unit can pass through a grid point.
 
         :param pos:"""
-        assert isinstance(pos, (Point2, Unit)), "pos is not of type Point2 or Unit"
+         
         pos = pos.position.rounded
         return self.game_info.pathing_grid[pos] == 1
 
