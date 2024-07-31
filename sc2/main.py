@@ -32,8 +32,8 @@ from sc2.proxy import Proxy
 from sc2.sc2process import SC2Process, kill_switch
 
 # Set the global logging level
-# logger.remove()
-# logger.add(sys.stdout, level="INFO")
+logger.remove()
+logger.add(sys.stdout, level="INFO")
 
 
 @dataclass
