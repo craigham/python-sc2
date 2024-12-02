@@ -1290,6 +1290,7 @@ class AbilityId(enum.Enum):
     MORPHTOBANELING_BANELING = 4119
     MORPHTOBANELING_CANCEL = 4120
     EFFECT_MOTHERSHIP_CLOAK = 4122
+    UNKNOWN_4446 = 4446
     
     def __repr__(self) -> str:
         return f"AbilityId.{self.name}"
