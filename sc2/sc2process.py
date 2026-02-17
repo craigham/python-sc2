@@ -33,7 +33,7 @@ class kill_switch:
         logger.info(f"kill_switch: Process cleanup for {len(cls._to_kill)} processes")
         for p in cls._to_kill:
             # pylint: disable=W0212
-            p._clean(verbose=False)
+            p._clean()
 
 
 class SC2Process:
